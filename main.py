@@ -1,6 +1,6 @@
 import time
 
-if __name__ == __main__:
+if __name__ == "__main__":
   while True:
     time.sleep(15)
     print('Hello World')
