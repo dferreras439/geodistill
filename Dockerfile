@@ -1,9 +1,14 @@
-# this dockerfile is for creating the production container.
-FROM python:3.9-alpine
+#  official Python runtime (not sure if alpine has git
+FROM python:3.9-slim
 
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+# pwd in the container
+WORKDIR /usr/src/app
 
+# Copy the current directory contents into the container at pwd
 COPY . .
 
-CMD ["python", "main.py"]
+# dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+# run
+CMD ["python", "./main.py"]
