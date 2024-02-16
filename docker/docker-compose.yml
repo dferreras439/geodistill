@@ -1,0 +1,7 @@
+version: "3"
+services:
+  geodistill:
+    build: https://github.com/dferreras439/geodistill.git#main
+    pull_policy: build
+    container_name: geodistill
+    restart: unless-stopped
