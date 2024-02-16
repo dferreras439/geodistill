@@ -1,3 +1,4 @@
+# this dockerfile is for creating the production container.
 FROM python:3.9-alpine
 
 COPY requirements.txt .
