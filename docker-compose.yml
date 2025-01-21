@@ -7,3 +7,9 @@ services:
     container_name: geodistill
     restart: unless-stopped
     command: ["sh", "-c", "python main.py && sleep 3600"]
+    environment:
+      - ENV_APP=my_app_value
+      - ENV_OAI=my_oai_value
+      - ENV_MEP=my_mep_value
+      - ENV_SYS=my_sys_value
+      - ENV_URL=my_url_value
