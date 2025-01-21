@@ -1,4 +1,4 @@
-version: "3"
+version: "3.8"
 
 services:
   geodistill-local:
@@ -6,4 +6,4 @@ services:
     pull_policy: build
     container_name: geodistill
     restart: unless-stopped
-    command: ["sh", "-c", "main.py && sleep 3600"]
+    command: ["sh", "-c", "python main.py && sleep 3600"]
