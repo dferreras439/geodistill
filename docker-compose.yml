@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  geodistill-local:
+    build: https://github.com/dferreras439/geodistill#generalized
+    pull_policy: build
+    container_name: geodistill
+    restart: unless-stopped
+    command: ["sh", "-c", "main.py && sleep 3600"]
